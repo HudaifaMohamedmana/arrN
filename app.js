@@ -141,3 +141,88 @@ const vehicle = {
   
   console.log(car1 == car2); // false
   console.log("-------------")
+  
+  
+  /////////////////////////
+  // When to use Objects //
+  /////////////////////////
+  
+  // name of your cat
+  let name = 'winky';
+  
+  // age of your cat
+  let age = 2;
+  
+  // favorite things of your cat
+  let favThings = ['water', 'cat toy'];
+  
+  // whether your cat can speak French
+  let canSpeakFrench = false;
+  
+  // whether your cat can solve a Rubik's cube
+  let canSolveRubiks = true;
+  
+  // your cat
+  const cat = {
+    name: 'winky',
+    age: 2,
+    favThings: ['water', 'cat toy'],
+    canSpeakFrench: false,
+    canSolveRubiks: true
+  }
+  
+  
+  /////////////////////////////////////////////////////////
+  // Manipulating Objects and Arrays Declared as `const` //
+  /////////////////////////////////////////////////////////
+  
+  /*
+    const only prevents you from reassigning a variable, it doesn't prevent you from 
+    adding or changing elements of arrays or properties of objects.
+  */
+  
+  // You can do this:
+  
+  const mogwai1 = {};
+  mogwai1.name = 'Gizmo';
+  
+  // You cannot do this:
+  
+  const mogwai2 = {};
+  // mogwai2 = { name: 'Gizmo' }; // Error
+  
+  
+  ////////////////////////////////////////
+  // Object Properties and Conditionals //
+  ////////////////////////////////////////
+  
+  // Using object properties in conditions
+  
+  const obj = {
+    salutation: 'hi',
+    count: 4
+  }
+  
+  if (obj.salutation === "hi") {
+    console.log('ok');
+  }
+  
+  for (let i = 0; i < obj.count; i++) {
+    console.log(i);
+  }
+  
+  // You can also test to see if a property exists on an object
+  
+  const obj2 = {
+    something: 'wuttt'
+  }
+  
+  if (obj2.something) {
+    console.log('ok');
+  }
+  
+  if (obj2.anotherthing) {
+    console.log('ok');
+  } else {
+    console.log("that property doesn't exist");
+  }
